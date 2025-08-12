@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recriando Wikipedia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #920000;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 200px;
+        }
+
+        nav {
+            background: #444;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #666;
+            border-radius: 5px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        aside {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        article {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+        /* --- Sidebar (links laterais) --- */
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside ul li {
+    margin-bottom: 8px;
+}
+
+aside ul li a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: transparent;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+aside ul li a:hover {
+    background: rgba(146, 0, 0, 0.1); /* bordô suave no hover */
+    color: #920000;
+    transform: translateY(-2px);
+}
+
+aside ul li a:visited {
+    color: #333; /* mantém a mesma cor mesmo visitado */
+}
+
+aside ul li a:focus-visible {
+    outline: 3px solid rgba(146, 0, 0, 0.3);
+    outline-offset: 3px;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/" aria-label="Página inicial">
+            <img src="novalogo.png" width="150" alt="Logo da empresa">
+        </a>
+    </header>
+
+    <nav aria-label="Menu principal">
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <aside aria-label="Barra lateral">
+            <h2>Séries e Filmes</h2>
+            <ul>
+                <li><a href="#">Ação</a></li>
+                <li><a href="#">Comédia</a></li>
+                <li><a href="#">Drama</a></li>
+                <li><a href="#">Ficção Científica</a></li>
+                <li><a href="#">Romance</a></li>
+                <li><a href="#">Terror</a></li>
+                
+            </ul>
+        </aside>
+
+        <article>
+            <section aria-labelledby="conteudo-principal">
+                <h1 id="conteudo-principal">Tudo sobre: Harry Potter</h1>
+                <p>A história de Harry Potter é uma jornada mágica que cativou gerações de leitores e espectadores ao redor do mundo. Escrita por J.K. Rowling, a saga narra a vida de um jovem bruxo destinado a enfrentar as forças das trevas. Ao longo de sete livros, os leitores testemunham o crescimento de Harry, suas amizades, desafios e a luta constante contra o mal encarnado por Lord Voldemort.</p>
+                <p>A saga de Harry Potter não é apenas uma história de bruxos e magia, mas uma exploração profunda de temas universais como amizade, coragem e o eterno conflito entre o bem e o mal. J.K. Rowling criou um mundo mágico que continua a encantar e inspirar, deixando um legado duradouro na literatura e na cultura pop.</p>
+                <figure>
+                    <img src="harry.webp" width="500" alt="Harry Potter">
+                </figure>
+                <blockquote><i>"Não se divida entre pessoas boas e más. Todos temos luz e trevas dentro de nós. O que importa é o lado ao qual decidimos agir; Isso é o que realmente somos".</i></blockquote>
+                <iframe width="500" height="315" src="https://www.youtube.com/embed/SFzft_2dcV0?si=jtEg9iylcK2inbGf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" alt="Vídeo de Harry Potter"allowfullscreen></iframe>
+            </section>
+        </article>
+
+        <aside aria-label="Navegação interna">
+            <h2>Neste Artigo</h2>
+            <ul>
+                <li><a href="#">Harry Potter e a Pedra Filosofal</a></li>
+                <li><a href="#">Harry Potter e a Câmara Secreta</a></li>
+                <li><a href="#">Harry Potter e o Prisioneiro de Azkaban</a></li>
+                <li><a href="#">Harry Potter e o Cálice de Fogo</a></li>
+                <li><a href="#">Harry Potter e a Ordem da Fênix</a></li>
+                <li><a href="#">Harry Potter e o Enigma do Príncipe</a></li>
+                <li><a href="#">Harry Potter e as Reliquias da Morte</a></li>
+               
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
